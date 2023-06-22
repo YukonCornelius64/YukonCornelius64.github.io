@@ -7,7 +7,6 @@
   <meta charset="utf-8" />
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/banner.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/sidebar.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -29,8 +28,7 @@
 </head>
 
 <body>
-
-	<div class="loader"></div>
+  <div class="loader"></div>
 		
 	<header>
     <nav class="navbar-default navbar-static-top" id="navbar-default" style="border-radius:0;">
@@ -48,78 +46,52 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="index.html"><span>Home</span></a></li>
-            <li><a href="stream.html">Stream</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stream.html"><span>Stream</span></a></li>
             <li><a href="https://miacroftmerch.myshopify.com/"">Store</a></li>
           </ul>
         </div>
       </div>
     </nav>
-        
-  <style>
-    .navbar-default {
-      background: #1a1a1a;
-    }
+
+    <style>
+      .navbar-default {
+        background: #1a1a1a;
+      }
+    
+      .navbar-default .navbar-nav li a {
+        color: #DEB251;
+      }
+      
+      .navbar-default .navbar-toggle .icon-bar {
+        background: #bbbbbb;
+      }
   
-    .navbar-default .navbar-nav li a {
-      color: #DEB251;
-    }
-    
-    .navbar-default .navbar-toggle .icon-bar {
-      background: #bbbbbb;
-    }
-
-    .navbar-nav {
-      float: right;
-    }
-
-    @media screen and (max-width: 768px) {
-    .navbar-nav {
-      float: left;
-    }
-    }  
-  </style>
+      .navbar-nav {
+        float: right;
+      }
   
-  </header>
+      @media screen and (max-width: 768px) {
+      .navbar-nav {
+        float: left;
+      }
+      }  
+    </style>
     
+    </header>
 
-  
-  <div class="banner">
-    <div class="opacity_overlay">
-      <div class="stars"></div>
-      <div class="twinkling"></div>
-      <div class="clouds"></div>
+<!-- Add a placeholder for the Twitch embed -->
+<div id="twitch-embed"></div>
 
-      <div class="info">
-        <h2>Welcome to the Manor</h2>
-        <hr>
-        <h3></h3>
-      </div> 		
-    </div>
-  </div>
-    
-  <!--  ------- Footer Section ------- -->
-	<footer class="footer">
-		<div class="container">
-			<div class="info">
-				<h3>MiaCroft Gaming</h3>
-				<ul class="social-icons">
-					<li><a href="https://www.twitch.tv/MiaCroft_" class="icon"><img src="images/icons/doodle/twitch.svg" alt="Icon" width="24" height="24"></a></li>
-					<li><a href="https://twitter.com/Mia_Croft_" class="icon"><img src="images/icons/doodle/twitter.svg" alt="Icon" width="24" height="24"></a></li>
-					<li><a href="https://www.tiktok.com/@mia_croft_" class="icon"><img src="images/icons/doodle/tik tok.svg" alt="Icon" width="24" height="24"></a></li>
-					<li><a href="#" class="icon"><img src="images/icons/doodle/youtube.svg" alt="Icon" width="24" height="24"></a></li>
-					<li><a href="#" class="icon"><img src="images/icons/doodle/instagram.svg" alt="Icon" width="24" height="24"></a></li>
-				</ul>
-			</div>
-		</div>
-	</footer>
-	
-  <!--  ------- Copyright Section ------- -->
-	<div class="copyright-part">
-		<p>&copy 2023 <span>MiaCroft</span> All Rights Reserved</p>
-	</div>
-    
-        
+<!-- Load the Twitch embed script -->
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+<!-- Create a Twitch.Player object. This will render within the placeholder div -->
+<script type="text/javascript">
+  new Twitch.Player("twitch-embed", {
+    channel: "miacroft_"
+  });
+</script>
 
 </body>
 </html>
