@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function includeHeader() {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(content => {
+          console.log(content)
+          const header = document.createElement('header');
+          header.innerHTML = content;
+          document.body.insertBefore(header, document.body.firstChild);
+        })
+        .catch(error => console.error('Error fetching header:', error));
+    }
+  </script>
+</head>
+
+<body onload="includeHeader()">
+  <!-- Rest of your content -->
+  <div class="loader"></div>
+
+  <!-- Banner content here -->
+
+  <!-- Footer content here -->
+
+</body>
+
+</html>

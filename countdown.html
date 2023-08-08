@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/scripts/bootstrap.min.css">
+  <link rel="stylesheet" href="css/scripts/sidebar.css">
+  <link rel="stylesheet" href="css/pages/style.css">
+  <link rel="stylesheet" href="css/pages/banner.css">
+  <link rel="stylesheet" href="css/countdown/countdown.css">
+  <link rel="stylesheet" href="css/countdown/buttons.css">
+
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+  
+  <script src="js/scripts/jquery-1.11.3.min.js"></script>
+  <script src="js/scripts/bootstrap.min.js"></script>
+  <script src="js/scripts/jPushMenu.js"></script>
+  <script src="js/scripts/counter.js"></script>
+  <script src="js/scripts/jquery.scrollUp.min.js"></script>
+  <script src="js/util.js"></script>
+
+  <script src="js/countdown/timerinput.js"></script>
+  <script src="js/countdown/countdown.js"></script>
+
+</head>
+
+<body>
+  <div class="loader"></div>
+  <header>
+    <nav class="navbar-default navbar-static-top" id="navbar-default" style="border-radius:0;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"
+          id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html"><span>Home</span></a></li>
+            <li><a href="stream.html">Stream</a></li>
+            <li><a href="https://miacroftmerch.myshopify.com/"">Store</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <style>
+      .navbar-default {
+        background: #1a1a1a;
+      }
+
+      .navbar-default .navbar-nav li a {
+        color: #DEB251;
+      }
+
+      .navbar-default .navbar-toggle .icon-bar {
+        background: #bbbbbb;
+      }
+
+      .navbar-nav {
+        float: right;
+      }
+
+      @media screen and (max-width: 768px) {
+        .navbar-nav {
+          float: left;
+        }
+      }
+    </style>
+  </header>
+
+  <div class="timer-container">
+
+    <div class="box-container">
+      <div class="box">
+        <div class="input-container">
+          <div class="arrow-container" id="prev-hours">
+            <div class="arrow prev"></div>
+          </div>
+          <input class="input-field" type="text" id="hours-input" placeholder="00" />
+          <div class="arrow-container" id="next-hours">
+            <div class="arrow next"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="input-container">
+          <div class="arrow-container" id="prev-minutes">
+            <div class="arrow prev"></div>
+          </div>
+          <input class="input-field" type="text" id="minutes-input" placeholder="00" />
+          <div class="arrow-container" id="next-minutes">
+            <div class="arrow next"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="input-container">
+          <div class="arrow-container" id="prev-seconds">
+            <div class="arrow prev"></div>
+          </div>
+          <input class="input-field" type="text" id="seconds-input" placeholder="00" />
+          <div class="arrow-container" id="next-seconds">
+            <div class="arrow next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="button-container">
+      <button class="button start">Start</button>
+      <button class="button stop">Stop</button>
+    </div>
+  </div>
+
+
+
+
+  <!--
+  <div id="timer-container">
+    <div class="input" id="timer-input">
+      <div class="hour">
+        <div class="time">
+          <span class="prev" id="prev-hours"></span>
+          <input class="input-field" type="text" id="hours-input" maxlength="2" placeholder="00" />
+          <span class="next" id="next-hours"></span>
+        </div>
+      </div>
+      <div class="minute">
+        <div class="time">
+          <span class="prev" id="prev-minutes"></span>
+          <input class="input-field" type="text" id="minutes-input" maxlength="2" placeholder="00" />
+          <span class="next" id="next-minutes"></span>
+          <div class="minutes-box" id="minutes-box"></div>
+        </div>
+      </div>
+      <div class="second">
+        <div class="time">
+          <span class="prev" id="prev-seconds"></span>
+          <input class="input-field" type="text" id="seconds-input" maxlength="2" placeholder="00" />
+          <span class="next" id="next-seconds"></span>
+          <div class="seconds-box" id="seconds-box"></div>
+        </div>
+      </div>
+    </div>
+
+     <div class="timer" id="timer-display" style="display: none;">
+      <span id="countdown-hours">00</span> :
+      <span id="countdown-minutes">00</span> :
+      <span id="countdown-seconds">00</span>
+    </div>
+
+    <div class="buttons">
+      <button class="start" id="start-button">Start</button>
+      <button class="stop" id="stop-button">Stop</button>
+    </div>
+
+  </div>
+-->
+
+  <!--  ------- Footer Section ------- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="info">
+        <h3>MiaCroft Gaming</h3>
+        <ul class="social-icons">
+          <li><a href="https://www.twitch.tv/MiaCroft_" class="icon"><img src="images/icons/doodle/twitch.svg"
+                alt="Icon" width="24" height="24"></a></li>
+          <li><a href="https://twitter.com/Mia_Croft_" class="icon"><img src="images/icons/doodle/twitter.svg"
+                alt="Icon" width="24" height="24"></a></li>
+          <li><a href="https://www.tiktok.com/@mia_croft_" class="icon"><img src="images/icons/doodle/tik tok.svg"
+                alt="Icon" width="24" height="24"></a></li>
+          <li><a href="#" class="icon"><img src="images/icons/doodle/youtube.svg" alt="Icon" width="24"
+                height="24"></a></li>
+          <li><a href="#" class="icon"><img src="images/icons/doodle/instagram.svg" alt="Icon" width="24"
+                height="24"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="copyright-part">
+    <p>&copy 2023 <span>MiaCroft</span> All Rights Reserved</p>
+  </div>
+  
+</body>
+
+</html>
+
+<!--
+
+
+.countdown {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 175px;
+  height: 150px;
+  border-radius: 5px;
+  color: #56de51;
+  font-size: 150px;
+  font-weight: bold;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+}
+
+
+-->

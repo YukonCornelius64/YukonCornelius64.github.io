@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Homepage</title>
+  
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/sidebar.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	
+	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+	
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jPushMenu.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/jquery.scrollUp.min.js"></script>
+  <script src="js/util.js"></script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+
+<body>
+  <div class="loader"></div>
+		
+	<header>
+    <nav class="navbar-default navbar-static-top" id="navbar-default" style="border-radius:0;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stream.html"><span>Stream</span></a></li>
+            <li><a href="https://miacroftmerch.myshopify.com/"">Store</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <style>
+      .navbar-default {
+        background: #1a1a1a;
+      }
+    
+      .navbar-default .navbar-nav li a {
+        color: #DEB251;
+      }
+      
+      .navbar-default .navbar-toggle .icon-bar {
+        background: #bbbbbb;
+      }
+  
+      .navbar-nav {
+        float: right;
+      }
+  
+      @media screen and (max-width: 768px) {
+      .navbar-nav {
+        float: left;
+      }
+      }  
+    </style>
+    
+    </header>
+
+<!-- Add a placeholder for the Twitch embed -->
+<div id="twitch-embed"></div>
+
+<!-- Load the Twitch embed script -->
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+<!-- Create a Twitch.Player object. This will render within the placeholder div -->
+<script type="text/javascript">
+  new Twitch.Player("twitch-embed", {
+    channel: "miacroft_"
+  });
+</script>
+
+</body>
+</html>
