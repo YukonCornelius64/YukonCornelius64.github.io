@@ -1,4 +1,4 @@
-// Event listener for DOMContentLoaded
+ // Event listener for DOMContentLoaded
 window.addEventListener('DOMContentLoaded', async () => {
   const username = 'miacroft_'; // Change this to the actual username
   const commands = await fetchCommands(username);
